@@ -33,7 +33,7 @@ const players = [
     careerStats: {
       appearances: 1056,
       goals: 824,
-      assists: 401,
+      assists: 363,
     },
     seasonStats: {
       appearances: 16,
