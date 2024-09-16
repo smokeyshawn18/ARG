@@ -31,7 +31,7 @@ const players = [
     image: Messi,
     club: Miami,
     careerStats: {
-      appearances: 1056,
+      appearances: 1054,
       goals: 824,
       assists: 363,
     },
@@ -73,7 +73,7 @@ const players = [
       assists: 89,
     },
     seasonStats: {
-      appearances: 5,
+      appearances: 6,
       goals: 1,
       assists: 0,
     },
@@ -91,7 +91,7 @@ const players = [
       assists: 57,
     },
     seasonStats: {
-      appearances: 4,
+      appearances: 5,
       goals: 0,
       assists: 0,
     },
@@ -109,8 +109,8 @@ const players = [
       assists: 50,
     },
     seasonStats: {
-      appearances: 6,
-      goals: 1,
+      appearances: 7,
+      goals: 2,
       assists: 1,
     },
   },
@@ -145,9 +145,9 @@ const players = [
       assists: 75,
     },
     seasonStats: {
-      appearances: 6,
+      appearances: 7,
       goals: 0,
-      assists: 0,
+      assists: 1,
     },
   },
 
