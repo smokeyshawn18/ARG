@@ -27,7 +27,7 @@ const players = [
       MLS: {
         matches: 16,
         goals: 16,
-        assists: 12,
+        assists: 13,
       },
       nationalStats: {
         matches: 0,
@@ -46,8 +46,8 @@ const players = [
     image: Alvarez,
     leagues: {
       LaLiga: {
-        matches: 4,
-        goals: 0,
+        matches: 5,
+        goals: 1,
         assists: 0,
       },
       nationalStats: {

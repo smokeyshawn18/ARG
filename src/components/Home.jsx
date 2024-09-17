@@ -6,6 +6,7 @@ import Conmebol from "../assets/conmebol.png";
 
 import { useState, useMemo, useEffect, useCallback } from "react";
 import KeyPerformers from "./Performer";
+import Kit2024 from "./Kit";
 
 const Home = () => {
   const matchDay = useMemo(
@@ -195,6 +196,7 @@ const Home = () => {
 
         {/* Key Performers Section */}
         <KeyPerformers />
+        <Kit2024/>
       </div>
     </section>
   );
