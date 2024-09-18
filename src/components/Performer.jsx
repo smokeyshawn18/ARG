@@ -139,20 +139,20 @@ function KeyPerformers() {
                   </div>
                 </div>
                 <div className="flex flex-col md:flex-row justify-between mb-4">
-                  <div className="flex flex-col items-center bg-[#000000] text-white p-4 rounded-lg mb-4 md:mb-0">
-                    <FaCalendarAlt className="text-white text-2xl mb-2" />
+                  <div className="flex flex-col items-center bg-gray-100 text-black p-4 rounded-lg mb-4 md:mb-0">
+                    <FaCalendarAlt className="text-black text-2xl mb-2" />
                     <p className="text-xl font-bold">{totalMatches}</p>
-                    <span className="text-sm">Matches</span>
+                    <span className="text-sm font-semibold">Matches</span>
                   </div>
-                  <div className="flex flex-col items-center bg-[#000000] text-white p-4 rounded-lg mb-4 md:mb-0">
-                    <GoGoal className="text-white text-2xl mb-2" />
+                  <div className="flex flex-col items-center bg-gray-100 text-black p-4 rounded-lg mb-4 md:mb-0">
+                    <GoGoal className="text-black text-2xl mb-2" />
                     <p className="text-xl font-bold">{totalGoals}</p>
-                    <span className="text-sm">Goals</span>
+                    <span className="text-sm font-semibold">Goals</span>
                   </div>
-                  <div className="flex flex-col items-center bg-[#000000] text-white p-4 rounded-lg">
-                    <FaHandsHelping className="text-white text-2xl mb-2" />
+                  <div className="flex flex-col items-center bg-gray-100 text-black p-4 rounded-lg">
+                    <FaHandsHelping className="text-black text-2xl mb-2" />
                     <p className="text-xl font-bold">{totalAssists}</p>
-                    <span className="text-sm">Assists</span>
+                    <span className="text-sm font-semibold">Assists</span>
                   </div>
                 </div>
                 <button

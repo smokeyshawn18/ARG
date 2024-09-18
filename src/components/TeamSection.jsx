@@ -15,6 +15,7 @@ const TeamSection = ({ players }) => {
           <PlayerCard key={index} player={player} />
         ))}
       </div>
+
       <p className="text-xl mt-12 p-6 text-center font-extrabold text-gray-300 bg-gray-800 bg-opacity-60 rounded-xl">
         Note:{" "}
         <span className="text-lg font-bold text-gray-200">

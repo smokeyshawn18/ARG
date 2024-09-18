@@ -7,6 +7,7 @@ import Conmebol from "../assets/conmebol.png";
 import { useState, useMemo, useEffect, useCallback } from "react";
 import KeyPerformers from "./Performer";
 import Kit2024 from "./Kit";
+import CoachProfile from "./Coach";
 
 const Home = () => {
   const matchDay = useMemo(
@@ -19,14 +20,6 @@ const Home = () => {
         opponentLogo: Venezuela,
         competition: Conmebol,
       },
-      //   {
-      //     date: "2024-09-19",
-      //     opponent: "Inter Milan",
-      //     time: "12:45",
-      //     venue: "Etihad Stadium",
-      //     opponentLogo: Inter,
-      //     competition: championsLeagueLogo,
-      //   },
     ],
     []
   );
@@ -193,10 +186,10 @@ const Home = () => {
             </p>
           </div>
         </div>
-
+        <CoachProfile />
         {/* Key Performers Section */}
         <KeyPerformers />
-        <Kit2024/>
+        <Kit2024 />
       </div>
     </section>
   );
