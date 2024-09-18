@@ -14,6 +14,8 @@ import Laliga from "../assets/atletico.png";
 import Inter from "../assets/inter.webp";
 import Miami from "../assets/miami.png";
 import Argentina from "../assets/arg.png";
+import Garnacho from "../assets/garnacho.webp";
+import United from "../assets/united.svg";
 
 const players = [
   {
@@ -27,12 +29,32 @@ const players = [
       MLS: {
         matches: 16,
         goals: 16,
-        assists: 13,
+        assists: 12,
       },
       nationalStats: {
         matches: 0,
         goals: 0,
         assists: 0,
+      },
+    },
+  },
+  {
+    name: "Alejandro Garnacho",
+    position: "Forward",
+    age: 20,
+    club: United,
+    shirtNumber: 17,
+    image: Garnacho,
+    leagues: {
+      United: {
+        matches: 6,
+        goals: 4,
+        assists: 3,
+      },
+      nationalStats: {
+        matches: 1,
+        goals: 0,
+        assists: 1,
       },
     },
   },
@@ -117,19 +139,19 @@ function KeyPerformers() {
                   </div>
                 </div>
                 <div className="flex flex-col md:flex-row justify-between mb-4">
-                  <div className="flex flex-col items-center bg-[#2c7da6] text-white p-4 rounded-lg mb-4 md:mb-0">
+                  <div className="flex flex-col items-center bg-[#000000] text-white p-4 rounded-lg mb-4 md:mb-0">
                     <FaCalendarAlt className="text-white text-2xl mb-2" />
-                    <p className="text-xl font-semibold">{totalMatches}</p>
+                    <p className="text-xl font-bold">{totalMatches}</p>
                     <span className="text-sm">Matches</span>
                   </div>
-                  <div className="flex flex-col items-center bg-[#2c7da6] text-white p-4 rounded-lg mb-4 md:mb-0">
+                  <div className="flex flex-col items-center bg-[#000000] text-white p-4 rounded-lg mb-4 md:mb-0">
                     <GoGoal className="text-white text-2xl mb-2" />
-                    <p className="text-xl font-semibold">{totalGoals}</p>
+                    <p className="text-xl font-bold">{totalGoals}</p>
                     <span className="text-sm">Goals</span>
                   </div>
-                  <div className="flex flex-col items-center bg-[#2c7da6] text-white p-4 rounded-lg">
+                  <div className="flex flex-col items-center bg-[#000000] text-white p-4 rounded-lg">
                     <FaHandsHelping className="text-white text-2xl mb-2" />
-                    <p className="text-xl font-semibold">{totalAssists}</p>
+                    <p className="text-xl font-bold">{totalAssists}</p>
                     <span className="text-sm">Assists</span>
                   </div>
                 </div>
@@ -176,6 +198,15 @@ function KeyPerformers() {
                         matches={player.leagues.SerieA.matches}
                         goals={player.leagues.SerieA.goals}
                         assists={player.leagues.SerieA.assists}
+                      />
+                    )}
+                    {player.leagues.United && (
+                      <LeagueStats
+                        leagueName="Manchester United "
+                        leagueLogo={United}
+                        matches={player.leagues.United.matches}
+                        goals={player.leagues.United.goals}
+                        assists={player.leagues.United.assists}
                       />
                     )}
                     <LeagueStats
