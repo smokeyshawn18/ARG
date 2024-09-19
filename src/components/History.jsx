@@ -4,7 +4,7 @@ import afaLogo from "../assets/afa.png";
 import worldCup1978 from "../assets/1978.jpeg";
 import maradona from "../assets/maradona.webp";
 
-import qatar2022 from "../assets/2022.jpeg";
+import qatar2022 from "../assets/2022.webp";
 import Finalissima from "../assets/finalissima.jpg";
 import Copa from "../assets/copa.webp";
 
