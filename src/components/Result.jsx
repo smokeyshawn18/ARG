@@ -46,7 +46,7 @@ const Results = () => {
             className="w-full sm:w-80 md:w-96 lg:w-1/3 bg-white rounded-xl shadow-xl border border-[#002f6c] overflow-hidden"
           >
             <div className="relative">
-              <div className="w-full h-32 bg-[#28537e]  flex items-center justify-between px-4 py-2">
+              <div className="w-full h-32 bg-[#28537e] flex items-center justify-between px-4 py-2">
                 {/* Home Team Logo */}
                 <div className="flex flex-col items-center">
                   <img
@@ -78,33 +78,51 @@ const Results = () => {
                   </p>
                 </div>
               </div>
-              <div className="mt-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+              {/* Scorers Section */}
+              <div className="mt-4 px-4">
+                <div className="flex flex-col sm:flex-row gap-4 justify-between">
                   {/* Home Team Scorers */}
-                  <div className="bg-white p-3 mb-3 mx-auto rounded-md shadow-sm border border-gray-200">
+                  <div className="bg-white w-full sm:w-1/2 p-3 rounded-md shadow-sm border border-gray-200">
+                    <h3 className="text-center text-lg font-semibold text-gray-700 mb-2">
+                      {result.homeTeam.name} Scorers
+                    </h3>
                     {result.scorers.homeTeam.map((scorer, idx) => (
-                      <p
-                        key={idx}
-                        className="text-sm font-medium text-gray-800"
-                      >
-                        {scorer.player} - {scorer.minute}
-                      </p>
+                      <div key={idx} className="flex items-center space-x-2">
+                        <img
+                          src={result.homeTeam.logo}
+                          alt={result.homeTeam.name}
+                          className="w-6 h-6 rounded-full"
+                        />
+                        <p className="text-sm font-medium text-gray-800">
+                          {scorer.player} - {scorer.minute}
+                        </p>
+                      </div>
                     ))}
                   </div>
 
                   {/* Away Team Scorers */}
-                  <div className="bg-white p-3 mx-auto rounded-md mb-3 shadow-sm border border-gray-200">
+                  <div className="bg-white w-full sm:w-1/2 p-3 rounded-md shadow-sm border border-gray-200">
+                    <h3 className="text-center text-lg font-semibold text-gray-700 mb-2">
+                      {result.awayTeam.name} Scorers
+                    </h3>
                     {result.scorers.awayTeam.map((scorer, idx) => (
-                      <p
-                        key={idx}
-                        className="text-sm font-medium text-gray-800"
-                      >
-                        {scorer.player} - {scorer.minute}
-                      </p>
+                      <div key={idx} className="flex items-center space-x-2">
+                        <img
+                          src={result.awayTeam.logo}
+                          alt={result.awayTeam.name}
+                          className="w-6 h-6 rounded-full"
+                        />
+                        <p className="text-sm font-medium text-gray-800">
+                          {scorer.player} - {scorer.minute}
+                        </p>
+                      </div>
                     ))}
                   </div>
                 </div>
               </div>
+
+              {/* Match Details */}
               <div className="p-4 bg-gray-100">
                 <div className="text-center mb-4">
                   <FaCalendarAlt className="text-blue-500 text-2xl mb-2" />
@@ -131,8 +149,6 @@ const Results = () => {
                     {result.stadium}
                   </p>
                 </div>
-
-                {/* Scorers Section with Grid Design */}
               </div>
             </div>
           </div>
