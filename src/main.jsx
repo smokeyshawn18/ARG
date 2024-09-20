@@ -9,6 +9,7 @@ import Team from "./components/Team.jsx";
 import Fixture from "./components/Fixture.jsx";
 import History from "./components/History.jsx";
 import Results from "./components/Result.jsx";
+import Footer from "./components/Footer.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -26,6 +27,7 @@ createRoot(document.getElementById("root")).render(
         {/* Add more routes as needed */}
       </Routes>
       {/* <Footer /> */}
+      <Footer />
     </Router>
   </StrictMode>
 );
