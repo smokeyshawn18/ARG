@@ -20,9 +20,7 @@ const Navbar = () => {
             alt="Logo"
             className="h-12 w-12 rounded-full border-2 border-white"
           />
-          <span className="text-[#004b87] font-extrabold text-3xl uppercase tracking-wider">
-            Argentina
-          </span>
+          <span className="text-[#004b87] font-extrabold text-3xl uppercase tracking-wider"></span>
         </div>
 
         {/* Desktop Menu */}
