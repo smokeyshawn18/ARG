@@ -27,7 +27,7 @@ const players = [
     image: Messi,
     leagues: {
       MLS: {
-        matches: 17,
+        matches: 18,
         goals: 16,
         assists: 12,
       },
@@ -47,7 +47,7 @@ const players = [
     image: Garnacho,
     leagues: {
       United: {
-        matches: 6,
+        matches: 7,
         goals: 4,
         assists: 3,
       },

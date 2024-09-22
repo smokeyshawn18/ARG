@@ -81,43 +81,53 @@ const Results = () => {
 
               {/* Scorers Section */}
               <div className="mt-4 px-4">
-                <div className="flex flex-col sm:flex-row gap-4 justify-between">
+                <div className="flex flex-col lg:flex-row gap-6 justify-between">
                   {/* Home Team Scorers */}
-                  <div className="bg-white w-full sm:w-1/2 p-3 rounded-md shadow-sm border border-gray-200">
-                    <h3 className="text-center text-lg font-semibold text-gray-700 mb-2">
+                  <div className="bg-white w-full lg:w-1/2 p-4 rounded-lg shadow-lg border border-gray-200">
+                    <h3 className="text-center text-lg font-bold text-gray-700 mb-3">
                       {result.homeTeam.name} Scorers
                     </h3>
-                    {result.scorers.homeTeam.map((scorer, idx) => (
-                      <div key={idx} className="flex items-center space-x-2">
-                        <img
-                          src={result.homeTeam.logo}
-                          alt={result.homeTeam.name}
-                          className="w-6 h-6 rounded-full"
-                        />
-                        <p className="text-sm font-medium text-gray-800">
-                          {scorer.player} - {scorer.minute}
-                        </p>
-                      </div>
-                    ))}
+                    <div className="space-y-3">
+                      {result.scorers.homeTeam.map((scorer, idx) => (
+                        <div key={idx} className="flex items-center space-x-3">
+                          <img
+                            src={result.homeTeam.logo}
+                            alt={result.homeTeam.name}
+                            className="w-8 h-8 rounded-full"
+                          />
+                          <p className="text-sm font-medium text-gray-800">
+                            {scorer.player} -{" "}
+                            <span className="font-semibold">
+                              {scorer.minute}
+                            </span>
+                          </p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
 
                   {/* Away Team Scorers */}
-                  <div className="bg-white w-full sm:w-1/2 p-3 rounded-md shadow-sm border border-gray-200">
-                    <h3 className="text-center text-lg font-semibold text-gray-700 mb-2">
+                  <div className="bg-white w-full lg:w-1/2 p-4 rounded-lg shadow-lg border border-gray-200">
+                    <h3 className="text-center text-lg font-bold text-gray-700 mb-3">
                       {result.awayTeam.name} Scorers
                     </h3>
-                    {result.scorers.awayTeam.map((scorer, idx) => (
-                      <div key={idx} className="flex items-center space-x-2">
-                        <img
-                          src={result.awayTeam.logo}
-                          alt={result.awayTeam.name}
-                          className="w-6 h-6 rounded-full"
-                        />
-                        <p className="text-sm font-medium text-gray-800">
-                          {scorer.player} - {scorer.minute}
-                        </p>
-                      </div>
-                    ))}
+                    <div className="space-y-3">
+                      {result.scorers.awayTeam.map((scorer, idx) => (
+                        <div key={idx} className="flex items-center space-x-3">
+                          <img
+                            src={result.awayTeam.logo}
+                            alt={result.awayTeam.name}
+                            className="w-8 h-8 rounded-full"
+                          />
+                          <p className="text-sm font-medium text-gray-800">
+                            {scorer.player} -{" "}
+                            <span className="font-semibold">
+                              {scorer.minute}
+                            </span>
+                          </p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
