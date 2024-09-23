@@ -8,14 +8,13 @@ const InstallButton = ({ onInstallClick }) => {
     const handleBeforeInstallPrompt = (event) => {
       event.preventDefault();
       window.deferredPrompt = event;
-      setIsVisible(true);
+      setIsVisible(true); // Show button when installable
     };
 
     const handleAppInstalled = () => {
-      setIsVisible(false);
+      setIsVisible(false); // Hide button after installation
     };
 
-    // Listen for beforeinstallprompt and appinstalled events
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
     window.addEventListener("appinstalled", handleAppInstalled);
 
@@ -28,13 +27,16 @@ const InstallButton = ({ onInstallClick }) => {
     };
   }, []);
 
-  // If the app is not installable, return null (no button)
+  // If the app is not installable or it's already installed, don't render the button
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50">
-      <div className="bg-[#75A3D3] text-[#FFFFFF] p-5 rounded shadow-lg border-2 border-[#F0F0F0]">
-        <button onClick={onInstallClick} className="font-bold text-xl">
+    <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50">
+      <div className="bg-gradient-to-r from-[#75A3D3] to-[#4E89C7] text-[#FFFFFF] p-6 rounded-full shadow-lg border-4 border-[#F0F0F0]">
+        <button
+          onClick={onInstallClick}
+          className="font-bold text-xl bg-white text-[#4E89C7] py-3 px-8 rounded-full hover:bg-[#F0F0F0] hover:text-[#75A3D3] transition-all duration-300 shadow-md"
+        >
           Install App
         </button>
       </div>

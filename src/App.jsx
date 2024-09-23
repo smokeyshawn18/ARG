@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Team from "./components/Team";
 import Footer from "./components/Footer";
 import Fixture from "./components/Fixture";
 import History from "./components/History";
 import Results from "./components/Results";
-import InstallButton from "./components/InstallButton"; // Import the InstallButton
+import InstallButton from "./components/InstallButton";
 
 function App() {
   const [installPromptEvent, setInstallPromptEvent] = useState(null);
@@ -15,17 +15,16 @@ function App() {
 
   useEffect(() => {
     const handleBeforeInstallPrompt = (event) => {
-      event.preventDefault();
+      event.preventDefault(); // Prevent default prompt
       setInstallPromptEvent(event);
-      setIsInstallable(true);
+      setIsInstallable(true); // Show install button
     };
 
     const handleAppInstalled = () => {
-      // Once the app is installed, hide the button
-      setIsInstallable(false);
+      setIsInstallable(false); // Hide install button after installation
     };
 
-    // Listen for beforeinstallprompt and appinstalled events
+    // Listen for events
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
     window.addEventListener("appinstalled", handleAppInstalled);
 
@@ -46,7 +45,7 @@ function App() {
         console.log("User accepted the A2HS prompt");
       }
       setInstallPromptEvent(null);
-      setIsInstallable(false);
+      setIsInstallable(false); // Hide button after interaction
     } else {
       console.log("Install prompt event is not available");
     }
@@ -66,7 +65,7 @@ function App() {
           </Routes>
         </div>
         <Footer />
-        {/* Install Button will only be shown when the app is installable */}
+        {/* Render the InstallButton only if installable */}
         {isInstallable && <InstallButton onInstallClick={handleInstallClick} />}
       </div>
     </Router>
