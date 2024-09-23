@@ -5,12 +5,6 @@ const InstallButton = ({ onInstallClick }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const isAppInstalled = localStorage.getItem("appInstalled");
-    if (isAppInstalled === "true") {
-      setIsVisible(false);
-      return;
-    }
-
     const handleBeforeInstallPrompt = (event) => {
       event.preventDefault();
       window.deferredPrompt = event;
@@ -18,10 +12,10 @@ const InstallButton = ({ onInstallClick }) => {
     };
 
     const handleAppInstalled = () => {
-      localStorage.setItem("appInstalled", "true");
       setIsVisible(false);
     };
 
+    // Listen for beforeinstallprompt and appinstalled events
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
     window.addEventListener("appinstalled", handleAppInstalled);
 
@@ -34,6 +28,7 @@ const InstallButton = ({ onInstallClick }) => {
     };
   }, []);
 
+  // If the app is not installable, return null (no button)
   if (!isVisible) return null;
 
   return (

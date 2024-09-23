@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import Fixture from "./components/Fixture";
 import History from "./components/History";
 import Results from "./components/Results";
-import InstallButton from "./components/InstallButton";
+import InstallButton from "./components/InstallButton"; // Import the InstallButton
 
 function App() {
   const [installPromptEvent, setInstallPromptEvent] = useState(null);
@@ -21,9 +21,11 @@ function App() {
     };
 
     const handleAppInstalled = () => {
+      // Once the app is installed, hide the button
       setIsInstallable(false);
     };
 
+    // Listen for beforeinstallprompt and appinstalled events
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
     window.addEventListener("appinstalled", handleAppInstalled);
 
@@ -45,6 +47,8 @@ function App() {
       }
       setInstallPromptEvent(null);
       setIsInstallable(false);
+    } else {
+      console.log("Install prompt event is not available");
     }
   };
 
@@ -62,7 +66,7 @@ function App() {
           </Routes>
         </div>
         <Footer />
-        {/* Install Button: will only be shown when installable */}
+        {/* Install Button will only be shown when the app is installable */}
         {isInstallable && <InstallButton onInstallClick={handleInstallClick} />}
       </div>
     </Router>
