@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import Fixture from "./components/Fixture";
 import History from "./components/History";
 import Results from "./components/Results";
-import InstallButton from "./components/InstallButton"; // Import the InstallButton
+import InstallButton from "./components/InstallButton";
 
 function App() {
   const [installPromptEvent, setInstallPromptEvent] = useState(null);
@@ -16,18 +16,23 @@ function App() {
   useEffect(() => {
     const handleBeforeInstallPrompt = (event) => {
       event.preventDefault();
-      console.log("beforeinstallprompt event fired");
       setInstallPromptEvent(event);
       setIsInstallable(true);
     };
 
+    const handleAppInstalled = () => {
+      setIsInstallable(false);
+    };
+
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+    window.addEventListener("appinstalled", handleAppInstalled);
 
     return () => {
       window.removeEventListener(
         "beforeinstallprompt",
         handleBeforeInstallPrompt
       );
+      window.removeEventListener("appinstalled", handleAppInstalled);
     };
   }, []);
 
@@ -40,8 +45,6 @@ function App() {
       }
       setInstallPromptEvent(null);
       setIsInstallable(false);
-    } else {
-      console.log("Install prompt event is not available");
     }
   };
 
@@ -59,8 +62,8 @@ function App() {
           </Routes>
         </div>
         <Footer />
-        {/* Sticky Install Button */}
-        <InstallButton onInstallClick={handleInstallClick} />
+        {/* Install Button: will only be shown when installable */}
+        {isInstallable && <InstallButton onInstallClick={handleInstallClick} />}
       </div>
     </Router>
   );
