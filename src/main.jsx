@@ -1,4 +1,4 @@
-import { StrictMode } from "react";
+import { StrictMode, useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -10,24 +10,63 @@ import Fixture from "./components/Fixture.jsx";
 import History from "./components/History.jsx";
 import Results from "./components/Result.jsx";
 import Footer from "./components/Footer.jsx";
+import InstallButton from "./components/InstallButton.jsx";
+
+function App() {
+  const [installPromptEvent, setInstallPromptEvent] = useState(null);
+  const [isInstallable, setIsInstallable] = useState(false);
+
+  useEffect(() => {
+    const handleBeforeInstallPrompt = (event) => {
+      event.preventDefault();
+      setInstallPromptEvent(event);
+      setIsInstallable(true);
+    };
+
+    window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+
+    return () => {
+      window.removeEventListener(
+        "beforeinstallprompt",
+        handleBeforeInstallPrompt
+      );
+    };
+  }, []);
+
+  const handleInstallClick = async () => {
+    if (isInstallable && installPromptEvent) {
+      installPromptEvent.prompt();
+      const { outcome } = await installPromptEvent.userChoice;
+      if (outcome === "accepted") {
+        console.log("User accepted the A2HS prompt");
+      }
+      setInstallPromptEvent(null);
+      setIsInstallable(false);
+    } else {
+      console.log("Install prompt event is not available");
+    }
+  };
+
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Team" element={<Team />} />
+        <Route path="/schedule" element={<Fixture />} />
+        <Route path="/results" element={<Results />} />
+        <Route path="/History" element={<History />} />
+      </Routes>
+      <Footer />
+      <InstallButton onInstallClick={handleInstallClick} />
+    </>
+  );
+}
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Team" element={<Team />} />{" "}
-        <Route path="/schedule" element={<Fixture />} />
-        {/* <Route path="/results" element={<Results />} />
-      <Route path="/trophy-cabinet" element={<TrophyCabinet />} /> */}
-        <Route path="/results" element={<Results />} />
-        <Route path="/History" element={<History />} />
-        {/* Add route for PlayerSection */}
-        {/* Add more routes as needed */}
-      </Routes>
-      {/* <Footer /> */}
-      <Footer />
+      <App />
     </Router>
   </StrictMode>
 );
