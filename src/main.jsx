@@ -58,7 +58,8 @@ function App() {
         <Route path="/History" element={<History />} />
       </Routes>
       <Footer />
-      <InstallButton onInstallClick={handleInstallClick} />
+      {/* Render the InstallButton only if installable */}
+      {isInstallable && <InstallButton onInstallClick={handleInstallClick} />}
     </>
   );
 }

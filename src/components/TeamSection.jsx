@@ -36,7 +36,7 @@ const TeamSection = ({ players }) => {
 };
 
 function PlayerCard({ player }) {
-  const [showCareerStats, setShowCareerStats] = useState(true);
+  const [showCareerStats, setShowCareerStats] = useState(false); // Default to "This Season" view
 
   // Function to calculate updated career stats
   const getUpdatedCareerStats = () => {
@@ -80,16 +80,7 @@ function PlayerCard({ player }) {
       </p>
 
       <div className="flex justify-center mb-6 space-x-4">
-        <button
-          onClick={() => setShowCareerStats(true)}
-          className={`px-6 py-2 rounded-full text-lg font-semibold transition-transform duration-300 ${
-            showCareerStats
-              ? "bg-blue-600 text-white transform scale-110"
-              : "bg-gray-700 text-gray-300 hover:bg-gray-600"
-          }`}
-        >
-          Career Stats
-        </button>
+        {/* "This Season" button now on the left */}
         <button
           onClick={() => setShowCareerStats(false)}
           className={`px-6 py-2 rounded-full text-lg font-semibold transition-transform duration-300 ${
@@ -99,6 +90,16 @@ function PlayerCard({ player }) {
           }`}
         >
           This Season
+        </button>
+        <button
+          onClick={() => setShowCareerStats(true)}
+          className={`px-6 py-2 rounded-full text-lg font-semibold transition-transform duration-300 ${
+            showCareerStats
+              ? "bg-blue-600 text-white transform scale-110"
+              : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+          }`}
+        >
+          Career Stats
         </button>
       </div>
 

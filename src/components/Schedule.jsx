@@ -4,7 +4,7 @@ import { FaCalendarAlt } from "react-icons/fa"; // Calendar icon
 const Schedule = ({ fixtures }) => {
   return (
     <div className="p-8 bg-darkblue min-h-screen">
-      <h1 className="text-4xl font-extrabold text-white mb-12 text-center">
+      <h1 className="text-4xl font-extrabold text-sky-900 mb-8 uppercase tracking-wider text-center">
         Upcoming Fixtures
       </h1>
       <div className="flex flex-wrap justify-center gap-8">

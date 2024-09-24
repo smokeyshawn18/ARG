@@ -56,12 +56,12 @@ const events = [
 
 const History = () => {
   return (
-    <div className="bg-gradient-to-b from-sky-600 to-white py-14 px-6">
+    <div className="bg-gradient-to-r from-[#74acdf] to-[#ffffff] py-14 px-6">
       <div className="text-center">
-        <h1 className="text-5xl font-extrabold text-black mb-6">
+        <h1 className="text-5xl font-extrabold text-sky-900 mb-6">
           Argentina Men&apos;s Football Team History
         </h1>
-        <p className="text-2xl text-gray-800 font-semibold">
+        <p className="text-2xl text-sky-800 font-semibold">
           A legacy of football greatness spanning decades.
         </p>
       </div>
