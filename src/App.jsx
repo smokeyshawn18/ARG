@@ -7,7 +7,9 @@ import Footer from "./components/Footer";
 import Fixture from "./components/Fixture";
 import History from "./components/History";
 import Results from "./components/Results";
+
 import InstallButton from "./components/InstallButton";
+import National from "./components/National";
 
 function App() {
   const [installPromptEvent, setInstallPromptEvent] = useState(null);
@@ -62,6 +64,7 @@ function App() {
             <Route path="/schedule" element={<Fixture />} />
             <Route path="/results" element={<Results />} />
             <Route path="/history" element={<History />} />
+            <Route path="/national" element={<National />} />
           </Routes>
         </div>
         <Footer />

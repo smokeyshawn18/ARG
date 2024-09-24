@@ -12,19 +12,24 @@ const Footer = () => {
               Quick Links
             </h3>
             <ul className="space-y-3">
-              {["Home", "Team", "Schedule", "Results", "History"].map(
-                (link) => (
-                  <li key={link}>
-                    <NavLink
-                      to={`/${link.toLowerCase()}`}
-                      className="block text-white hover:text-[#74acdf] hover:underline transition"
-                      onClick={() => window.scrollTo(0, 0)}
-                    >
-                      {link}
-                    </NavLink>
-                  </li>
-                )
-              )}
+              {[
+                "Home",
+                "Team",
+                "Schedule",
+                "Results",
+                "History",
+                "National",
+              ].map((link) => (
+                <li key={link}>
+                  <NavLink
+                    to={`/${link.toLowerCase()}`}
+                    className="block text-white hover:text-[#74acdf] hover:underline transition"
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    {link}
+                  </NavLink>
+                </li>
+              ))}
             </ul>
           </div>
 

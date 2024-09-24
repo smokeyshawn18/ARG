@@ -11,6 +11,7 @@ import History from "./components/History.jsx";
 import Results from "./components/Result.jsx";
 import Footer from "./components/Footer.jsx";
 import InstallButton from "./components/InstallButton.jsx";
+import National from "./components/National.jsx";
 
 function App() {
   const [installPromptEvent, setInstallPromptEvent] = useState(null);
@@ -56,6 +57,7 @@ function App() {
         <Route path="/schedule" element={<Fixture />} />
         <Route path="/results" element={<Results />} />
         <Route path="/History" element={<History />} />
+        <Route path="/national" element={<National />} />
       </Routes>
       <Footer />
       {/* Render the InstallButton only if installable */}

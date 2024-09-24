@@ -31,6 +31,7 @@ const Navbar = () => {
             { path: "/Schedule", label: "Schedule" },
             { path: "/History", label: "History" },
             { path: "/Results", label: "Result" },
+            { path: "/National", label: "National" },
           ].map(({ path, label }, index) => (
             <NavLink
               key={index}
@@ -90,6 +91,7 @@ const Navbar = () => {
               { path: "/Schedule", label: "Schedule" },
               { path: "/History", label: "History" },
               { path: "/Results", label: "Results" },
+              { path: "/National", label: "National" },
             ].map(({ path, label }, index) => (
               <NavLink
                 key={index}
