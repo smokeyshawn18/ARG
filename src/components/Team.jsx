@@ -134,7 +134,7 @@ const players = [
   },
   {
     name: "Rodrigo De Paul",
-    position: "CM",
+    position: "DM",
     shirt: 7,
     age: 30,
     image: De,

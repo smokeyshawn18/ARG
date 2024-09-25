@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gradient-to-r from-[#74acdf] to-[#ffffff] p-6 sticky top-0 z-50 shadow-lg">
+    <nav className="bg-gradient-to-r from-[#74acdf] to-[#ffffff] p-4 sticky top-0 z-50 shadow-lg">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo and Title */}
         <div className="flex items-center space-x-4">
@@ -31,7 +31,7 @@ const Navbar = () => {
             { path: "/Schedule", label: "Schedule" },
             { path: "/History", label: "History" },
             { path: "/Results", label: "Result" },
-            { path: "/National", label: "National" },
+            { path: "/National", label: "National & Club" },
           ].map(({ path, label }, index) => (
             <NavLink
               key={index}
