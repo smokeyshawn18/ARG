@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
-import Navbar from "./components/Navbar";
-import Team from "./components/Team";
-import Footer from "./components/Footer";
-import Fixture from "./components/Fixture";
-import History from "./components/History";
-import Results from "./components/Results";
+import {
+  Home,
+  Navbar,
+  Team,
+  Footer,
+  Fixture,
+  History,
+  Results,
+} from "./components";
 
 import InstallButton from "./components/InstallButton";
 import National from "./components/National";

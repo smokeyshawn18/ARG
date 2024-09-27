@@ -47,7 +47,7 @@ const players = [
     image: Garnacho,
     leagues: {
       United: {
-        matches: 7,
+        matches: 8,
         goals: 4,
         assists: 3,
       },
@@ -68,8 +68,8 @@ const players = [
     image: Alvarez,
     leagues: {
       LaLiga: {
-        matches: 7,
-        goals: 1,
+        matches: 8,
+        goals: 2,
         assists: 0,
       },
       nationalStats: {
