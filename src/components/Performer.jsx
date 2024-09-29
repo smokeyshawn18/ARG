@@ -27,8 +27,8 @@ const players = [
     image: Messi,
     leagues: {
       MLS: {
-        matches: 18,
-        goals: 16,
+        matches: 19,
+        goals: 17,
         assists: 12,
       },
       nationalStats: {
