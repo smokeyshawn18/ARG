@@ -36,8 +36,8 @@ const players = [
       assists: 363,
     },
     seasonStats: {
-      appearances: 19,
-      goals: 17,
+      appearances: 20,
+      goals: 19,
       assists: 12,
     },
   },
@@ -55,8 +55,8 @@ const players = [
       assists: 299,
     },
     seasonStats: {
-      appearances: 7,
-      goals: 1,
+      appearances: 8,
+      goals: 2,
       assists: 1,
     },
   },
@@ -73,7 +73,7 @@ const players = [
       assists: 89,
     },
     seasonStats: {
-      appearances: 8,
+      appearances: 9,
       goals: 2,
       assists: 0,
     },
@@ -91,8 +91,8 @@ const players = [
       assists: 57,
     },
     seasonStats: {
-      appearances: 8,
-      goals: 2,
+      appearances: 9,
+      goals: 3,
       assists: 1,
     },
   },
@@ -109,7 +109,7 @@ const players = [
       assists: 50,
     },
     seasonStats: {
-      appearances: 10,
+      appearances: 11,
       goals: 3,
       assists: 1,
     },
@@ -127,7 +127,7 @@ const players = [
       assists: 34,
     },
     seasonStats: {
-      appearances: 7,
+      appearances: 8,
       goals: 2,
       assists: 1,
     },
@@ -145,7 +145,7 @@ const players = [
       assists: 75,
     },
     seasonStats: {
-      appearances: 9,
+      appearances: 10,
       goals: 0,
       assists: 1,
     },
@@ -164,8 +164,8 @@ const players = [
       assists: 32,
     },
     seasonStats: {
-      appearances: 10,
-      goals: 0,
+      appearances: 11,
+      goals: 1,
       assists: 1,
     },
   },
@@ -183,9 +183,9 @@ const players = [
       assists: 44,
     },
     seasonStats: {
-      appearances: 4,
+      appearances: 6,
       goals: 0,
-      assists: 0,
+      assists: 1,
     },
   },
   {
@@ -219,7 +219,7 @@ const players = [
       assists: 10,
     },
     seasonStats: {
-      appearances: 9,
+      appearances: 11,
       goals: 4,
       assists: 4,
     },
@@ -237,7 +237,7 @@ const players = [
       assists: 13,
     },
     seasonStats: {
-      appearances: 9,
+      appearances: 11,
       goals: 0,
       assists: 0,
     },

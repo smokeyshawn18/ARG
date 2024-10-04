@@ -7,11 +7,13 @@ const Schedule = ({ fixtures }) => {
       <h1 className="text-4xl font-extrabold text-sky-900 mb-8 uppercase tracking-wider text-center">
         Upcoming Fixtures
       </h1>
-      <div className="flex flex-wrap justify-center gap-8">
+
+      {/* Grid Container */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
         {fixtures.map((fixture, index) => (
           <div
             key={index}
-            className="w-full sm:w-80 md:w-96 lg:w-1/3 bg-white rounded-xl shadow-lg border border-darkblue"
+            className="w-full sm:w-80 md:w-96 lg:w-full bg-white rounded-xl shadow-lg border border-darkblue"
           >
             <div className="relative">
               <div className="w-full h-40 bg-gradient-to-r from-[#31607f] to-[#002f6c] flex items-center justify-center text-center text-white">

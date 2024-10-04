@@ -29,8 +29,8 @@ const Navbar = () => {
             { path: "/", label: "Home" },
             { path: "/Team", label: "Team" },
             { path: "/Schedule", label: "Schedule" },
-            { path: "/History", label: "History" },
             { path: "/Results", label: "Result" },
+            { path: "/History", label: "History" },
             { path: "/National", label: "National" },
           ].map(({ path, label }, index) => (
             <NavLink
