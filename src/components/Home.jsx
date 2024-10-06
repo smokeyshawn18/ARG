@@ -16,7 +16,7 @@ const Home = () => {
         date: "2024-10-14",
         opponent: "Venezuela",
         time: "19:45",
-        venue: "Etihad Stadium",
+        venue: "Estadio Monumental de Maturín, Venezuela",
         opponentLogo: Venezuela,
         competition: Conmebol,
       },

@@ -68,7 +68,7 @@ function PlayerCard({ player }) {
       <h2 className="text-3xl font-bold text-white mb-1 text-center">
         {player.name}
       </h2>
-      <img src={player.club} className="w-10 h-11 mt-2 mb-2 mx-auto" alt="" />
+      <img src={player.club} className="w-12 h-12 mt-2 mb-2 mx-auto" alt="" />
       <p className="text-lg text-blue-200 text-center font-semibold mb-2 mt-2">
         {player.age}
       </p>

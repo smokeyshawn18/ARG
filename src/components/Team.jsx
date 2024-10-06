@@ -21,6 +21,10 @@ import Chelsea from "../assets/chelsea.png";
 import Garnacho from "../assets/garnacho.webp";
 import United from "../assets/united.svg";
 import Lisandro from "../assets/lisandro.webp";
+import Bayer from "../assets/baye.png";
+import Pala from "../assets/pal.jpg";
+import Romero from "../assets/romero.webp";
+import Tottenham from "../assets/tot.jpg";
 
 const players = [
   {
@@ -36,7 +40,7 @@ const players = [
       assists: 363,
     },
     seasonStats: {
-      appearances: 20,
+      appearances: 21,
       goals: 19,
       assists: 12,
     },
@@ -91,7 +95,7 @@ const players = [
       assists: 57,
     },
     seasonStats: {
-      appearances: 9,
+      appearances: 10,
       goals: 3,
       assists: 1,
     },
@@ -164,7 +168,7 @@ const players = [
       assists: 32,
     },
     seasonStats: {
-      appearances: 11,
+      appearances: 12,
       goals: 1,
       assists: 1,
     },
@@ -207,6 +211,24 @@ const players = [
     },
   },
   {
+    name: "Exequiel Palacios",
+    position: "CM",
+    shirt: 14,
+    age: 26,
+    image: Pala,
+    club: Bayer,
+    careerStats: {
+      appearances: 240,
+      goals: 24,
+      assists: 25,
+    },
+    seasonStats: {
+      appearances: 5,
+      goals: 0,
+      assists: 2,
+    },
+  },
+  {
     name: "Alejandro Garnacho",
     position: "LW",
     shirt: 17,
@@ -222,6 +244,24 @@ const players = [
       appearances: 11,
       goals: 4,
       assists: 4,
+    },
+  },
+  {
+    name: "Cristian Romero",
+    position: "CB",
+    shirt: 13,
+    age: 26,
+    image: Romero,
+    club: Tottenham,
+    careerStats: {
+      appearances: 257,
+      goals: 15,
+      assists: 10,
+    },
+    seasonStats: {
+      appearances: 7,
+      goals: 1,
+      assists: 0,
     },
   },
   {
