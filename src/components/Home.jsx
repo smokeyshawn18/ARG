@@ -13,9 +13,9 @@ const Home = () => {
   const matchDay = useMemo(
     () => [
       {
-        date: "2024-10-14",
+        date: "2024-10-11",
         opponent: "Venezuela",
-        time: "19:45",
+        time: "02:45",
         venue: "Estadio Monumental de Maturín, Venezuela",
         opponentLogo: Venezuela,
         competition: Conmebol,
