@@ -2,6 +2,7 @@ import { FaCalendarAlt } from "react-icons/fa";
 import Argentina from "../assets/arg.png";
 import Columbia from "../assets/col.webp";
 import Conmebol from "../assets/conmebol.png";
+import Venezuela from "../assets/vene.png";
 
 const Results = () => {
   const results = [
@@ -29,6 +30,29 @@ const Results = () => {
           { player: "Yerson Mosquera", minute: "25'" },
           { player: "James Rodriguez", minute: "25' (P)" },
         ],
+      },
+    },
+    {
+      homeTeam: {
+        name: "Argentina",
+        logo: Argentina,
+        score: 1,
+      },
+      awayTeam: {
+        name: "Venezuela",
+        logo: Venezuela,
+        score: 1,
+      },
+      date: "October 11, 2024",
+      time: "2:45",
+      format: "AM",
+      competitionLogo: Conmebol,
+      competition: "WC - Qualifiers Conmebol",
+      venue: "Estadio Monumental de Maturin, Venezuela",
+      stadium: "Venezuela",
+      scorers: {
+        homeTeam: [{ player: "Otamendi", minute: "13'" }],
+        awayTeam: [{ player: "Rondon", minute: "65'" }],
       },
     },
     // Add more match results as needed

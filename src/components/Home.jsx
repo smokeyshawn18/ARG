@@ -1,8 +1,8 @@
 import heroImage from "../assets/homes.jpg";
 
 import { FaMapMarkerAlt, FaClock, FaTicketAlt } from "react-icons/fa";
-import Venezuela from "../assets/vene.png";
-import Conmebol from "../assets/conmebol.png";
+// import Venezuela from "../assets/vene.png";
+// import Conmebol from "../assets/conmebol.png";
 
 import { useState, useMemo, useEffect, useCallback } from "react";
 import KeyPerformers from "./Performer";
@@ -12,14 +12,14 @@ import CoachProfile from "./Coach";
 const Home = () => {
   const matchDay = useMemo(
     () => [
-      {
-        date: "2024-10-11",
-        opponent: "Venezuela",
-        time: "02:45",
-        venue: "Estadio Monumental de Maturín, Venezuela",
-        opponentLogo: Venezuela,
-        competition: Conmebol,
-      },
+      // {
+      //   date: "2024-10-11",
+      //   opponent: "Venezuela",
+      //   time: "02:45",
+      //   venue: "Estadio Monumental de Maturín, Venezuela",
+      //   opponentLogo: Venezuela,
+      //   competition: Conmebol,
+      // },
     ],
     []
   );
