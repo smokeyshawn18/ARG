@@ -32,9 +32,9 @@ const players = [
         assists: 12,
       },
       nationalStats: {
-        matches: 1,
-        goals: 0,
-        assists: 0,
+        matches: 2,
+        goals: 3,
+        assists: 2,
       },
     },
   },
@@ -73,8 +73,8 @@ const players = [
         assists: 0,
       },
       nationalStats: {
-        matches: 3,
-        goals: 1,
+        matches: 4,
+        goals: 2,
         assists: 1,
       },
     },

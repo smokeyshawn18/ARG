@@ -3,6 +3,7 @@ import Argentina from "../assets/arg.png";
 import Columbia from "../assets/col.webp";
 import Conmebol from "../assets/conmebol.png";
 import Venezuela from "../assets/vene.png";
+import Bolivia from "../assets/bolivia.png";
 
 const Results = () => {
   const results = [
@@ -10,12 +11,58 @@ const Results = () => {
       homeTeam: {
         name: "Argentina",
         logo: Argentina,
-        score: 1,
+      },
+      awayTeam: {
+        name: "Bolivia",
+        logo: Bolivia,
+      },
+      date: "Oct 16, 2024",
+      time: "5:45",
+      format: "AM",
+      competitionLogo: Conmebol,
+      competition: "WC - Qualifiers Conmebol",
+      venue: "Estadio Metropolitano",
+      stadium: "Columbia",
+      scorers: {
+        homeTeam: [
+          { player: "Messi", minute: "19', 84', 86'" },
+          { player: "Lautaro", minute: "43'" },
+          { player: "Alvarez", minute: "45+3'" },
+          { player: "Almada", minute: "69" },
+        ],
+        awayTeam: [],
+      },
+    },
+
+    {
+      homeTeam: {
+        name: "Argentina",
+        logo: Argentina,
+      },
+      awayTeam: {
+        name: "Venezuela",
+        logo: Venezuela,
+      },
+      date: "October 11, 2024",
+      time: "2:45",
+      format: "AM",
+      competitionLogo: Conmebol,
+      competition: "WC - Qualifiers Conmebol",
+      venue: "Estadio Monumental de Maturin, Venezuela",
+      stadium: "Venezuela",
+      scorers: {
+        homeTeam: [{ player: "Otamendi", minute: "13'" }],
+        awayTeam: [{ player: "Rondon", minute: "65'" }],
+      },
+    },
+    {
+      homeTeam: {
+        name: "Argentina",
+        logo: Argentina,
       },
       awayTeam: {
         name: "Columbia",
         logo: Columbia,
-        score: 2,
       },
       date: "September 11, 2024",
       time: "2:30",
@@ -32,31 +79,25 @@ const Results = () => {
         ],
       },
     },
-    {
-      homeTeam: {
-        name: "Argentina",
-        logo: Argentina,
-        score: 1,
-      },
-      awayTeam: {
-        name: "Venezuela",
-        logo: Venezuela,
-        score: 1,
-      },
-      date: "October 11, 2024",
-      time: "2:45",
-      format: "AM",
-      competitionLogo: Conmebol,
-      competition: "WC - Qualifiers Conmebol",
-      venue: "Estadio Monumental de Maturin, Venezuela",
-      stadium: "Venezuela",
-      scorers: {
-        homeTeam: [{ player: "Otamendi", minute: "13'" }],
-        awayTeam: [{ player: "Rondon", minute: "65'" }],
-      },
-    },
-    // Add more match results as needed
   ];
+
+  // Function to calculate score based on the number of goal minutes
+  const calculateScore = (teamScorers) => {
+    return teamScorers.length > 0
+      ? teamScorers.reduce(
+          (total, scorer) => total + scorer.minute.split(", ").length,
+          0
+        )
+      : 0;
+  };
+
+  const renderScorers = (teamScorers) => {
+    return teamScorers.map((scorer, idx) => (
+      <p key={idx} className="text-sm font-medium text-gray-800">
+        {scorer.player} - {scorer.minute}
+      </p>
+    ));
+  };
 
   return (
     <div className="p-8 bg-darkblue min-h-screen">
@@ -86,7 +127,8 @@ const Results = () => {
                 {/* Score */}
                 <div className="text-center flex flex-col justify-center">
                   <p className="text-4xl font-bold text-white">
-                    {result.homeTeam.score} - {result.awayTeam.score}
+                    {calculateScore(result.scorers.homeTeam)} -{" "}
+                    {calculateScore(result.scorers.awayTeam)}
                   </p>
                 </div>
 
@@ -112,21 +154,7 @@ const Results = () => {
                       {result.homeTeam.name} Scorers
                     </h3>
                     <div className="space-y-3">
-                      {result.scorers.homeTeam.map((scorer, idx) => (
-                        <div key={idx} className="flex items-center space-x-3">
-                          <img
-                            src={result.homeTeam.logo}
-                            alt={result.homeTeam.name}
-                            className="w-8 h-8 rounded-full"
-                          />
-                          <p className="text-sm font-medium text-gray-800">
-                            {scorer.player} -{" "}
-                            <span className="font-semibold">
-                              {scorer.minute}
-                            </span>
-                          </p>
-                        </div>
-                      ))}
+                      {renderScorers(result.scorers.homeTeam)}
                     </div>
                   </div>
 
@@ -136,21 +164,7 @@ const Results = () => {
                       {result.awayTeam.name} Scorers
                     </h3>
                     <div className="space-y-3">
-                      {result.scorers.awayTeam.map((scorer, idx) => (
-                        <div key={idx} className="flex items-center space-x-3">
-                          <img
-                            src={result.awayTeam.logo}
-                            alt={result.awayTeam.name}
-                            className="w-8 h-8 rounded-full"
-                          />
-                          <p className="text-sm font-medium text-gray-800">
-                            {scorer.player} -{" "}
-                            <span className="font-semibold">
-                              {scorer.minute}
-                            </span>
-                          </p>
-                        </div>
-                      ))}
+                      {renderScorers(result.scorers.awayTeam)}
                     </div>
                   </div>
                 </div>

@@ -2,30 +2,11 @@ import Schedule from "./Schedule";
 import Argentina from "../assets/arg.png";
 
 import Conmebol from "../assets/conmebol.png";
-import Bolivia from "../assets/bolivia.png";
+
 import Para from "../assets/para.png";
 import Peru from "../assets/peru.png";
 
 const fixtures = [
-  {
-    homeTeam: {
-      name: "Argentina",
-      logo: Argentina,
-      country: "Argentina",
-    },
-    awayTeam: {
-      name: "Bolivia",
-      logo: Bolivia,
-      country: "Bolivia",
-    },
-    date: "2024-10-16",
-    time: "05:45",
-    format: "AM",
-    comp: "WC - Qualifiers Conmebol",
-    venue: "Estadio Mas Monumental",
-    stadium: "Buenos Aires, Argentina",
-    competetion: Conmebol,
-  },
   {
     homeTeam: {
       name: "Argentina",
