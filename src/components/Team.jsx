@@ -25,6 +25,8 @@ import Bayer from "../assets/baye.png";
 import Pala from "../assets/pal.jpg";
 import Romero from "../assets/romero.webp";
 import Tottenham from "../assets/tot.jpg";
+import Emi from "../assets/emi.jpg";
+import Villa from "../assets/villa.png";
 
 const players = [
   {
@@ -77,7 +79,7 @@ const players = [
       assists: 89,
     },
     seasonStats: {
-      appearances: 9,
+      appearances: 10,
       goals: 2,
       assists: 0,
     },
@@ -95,8 +97,8 @@ const players = [
       assists: 57,
     },
     seasonStats: {
-      appearances: 12,
-      goals: 4,
+      appearances: 13,
+      goals: 5,
       assists: 2,
     },
   },
@@ -113,9 +115,9 @@ const players = [
       assists: 50,
     },
     seasonStats: {
-      appearances: 14,
+      appearances: 15,
       goals: 5,
-      assists: 1,
+      assists: 2,
     },
   },
   {
@@ -149,7 +151,7 @@ const players = [
       assists: 75,
     },
     seasonStats: {
-      appearances: 13,
+      appearances: 14,
       goals: 0,
       assists: 1,
     },
@@ -168,7 +170,7 @@ const players = [
       assists: 32,
     },
     seasonStats: {
-      appearances: 13,
+      appearances: 14,
       goals: 1,
       assists: 1,
     },
@@ -205,7 +207,7 @@ const players = [
       assists: 28,
     },
     seasonStats: {
-      appearances: 10,
+      appearances: 11,
       goals: 0,
       assists: 1,
     },
@@ -280,6 +282,24 @@ const players = [
       appearances: 13,
       goals: 0,
       assists: 0,
+    },
+  },
+  {
+    name: "Emiliano Martínez",
+    position: "GK",
+    shirt: 1,
+    age: 32,
+    image: Emi, // Replace with actual image
+    club: Villa,
+    careerStats: {
+      appearances: 305,
+      goalsConceded: 336,
+      cleanSheets: 119,
+    },
+    seasonStats: {
+      appearances: 12,
+      goalsConceded: 12,
+      cleanSheets: 4,
     },
   },
 

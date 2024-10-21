@@ -40,12 +40,21 @@ function PlayerCard({ player }) {
 
   // Function to calculate updated career stats
   const getUpdatedCareerStats = () => {
-    return {
-      appearances:
-        player.careerStats.appearances + player.seasonStats.appearances,
-      goals: player.careerStats.goals + player.seasonStats.goals,
-      assists: player.careerStats.assists + player.seasonStats.assists,
-    };
+    return player.position === "GK"
+      ? {
+          appearances:
+            player.careerStats.appearances + player.seasonStats.appearances,
+          goalsConceded:
+            player.careerStats.goalsConceded + player.seasonStats.goalsConceded,
+          cleanSheets:
+            player.careerStats.cleanSheets + player.seasonStats.cleanSheets,
+        }
+      : {
+          appearances:
+            player.careerStats.appearances + player.seasonStats.appearances,
+          goals: player.careerStats.goals + player.seasonStats.goals,
+          assists: player.careerStats.assists + player.seasonStats.assists,
+        };
   };
 
   const careerStats = getUpdatedCareerStats();
@@ -72,15 +81,11 @@ function PlayerCard({ player }) {
       <p className="text-lg text-blue-200 text-center font-semibold mb-2 mt-2">
         {player.age}
       </p>
-      <p className="text-lg text-blue-200 text-center font-semibold mb-2 mt-2">
-        {player.status}
-      </p>
       <p className="text-lg text-blue-400 text-center font-semibold mb-4">
         {player.position}
       </p>
 
       <div className="flex justify-center mb-6 space-x-4">
-        {/* "This Season" button now on the left */}
         <button
           onClick={() => setShowCareerStats(false)}
           className={`px-6 py-2 rounded-full text-lg font-semibold transition-transform duration-300 ${
@@ -119,26 +124,59 @@ function PlayerCard({ player }) {
                 : player.seasonStats.appearances}
             </span>
           </li>
-          <li className="flex items-center justify-between">
-            <span className="flex items-center space-x-2">
-              <FaFutbol className="text-yellow-400 text-xl" />
-              <span className="font-medium">Goals:</span>
-            </span>
-            <span className="font-bold text-white">
-              {showCareerStats ? careerStats.goals : player.seasonStats.goals}
-            </span>
-          </li>
-          <li className="flex items-center justify-between">
-            <span className="flex items-center space-x-2">
-              <AiOutlinePlus className="text-purple-400 text-xl" />
-              <span className="font-medium">Assists:</span>
-            </span>
-            <span className="font-bold text-white">
-              {showCareerStats
-                ? careerStats.assists
-                : player.seasonStats.assists}
-            </span>
-          </li>
+
+          {/* Display different stats based on position */}
+          {player.position === "GK" ? (
+            <>
+              <li className="flex items-center justify-between">
+                <span className="flex items-center space-x-2">
+                  <FaFutbol className="text-red-400 text-xl" />
+                  <span className="font-medium">Goals Conceded:</span>
+                </span>
+                <span className="font-bold text-white">
+                  {showCareerStats
+                    ? careerStats.goalsConceded
+                    : player.seasonStats.goalsConceded}
+                </span>
+              </li>
+              <li className="flex items-center justify-between">
+                <span className="flex items-center space-x-2">
+                  <AiOutlinePlus className="text-green-400 text-xl" />
+                  <span className="font-medium">Clean Sheets:</span>
+                </span>
+                <span className="font-bold text-white">
+                  {showCareerStats
+                    ? careerStats.cleanSheets
+                    : player.seasonStats.cleanSheets}
+                </span>
+              </li>
+            </>
+          ) : (
+            <>
+              <li className="flex items-center justify-between">
+                <span className="flex items-center space-x-2">
+                  <FaFutbol className="text-yellow-400 text-xl" />
+                  <span className="font-medium">Goals:</span>
+                </span>
+                <span className="font-bold text-white">
+                  {showCareerStats
+                    ? careerStats.goals
+                    : player.seasonStats.goals}
+                </span>
+              </li>
+              <li className="flex items-center justify-between">
+                <span className="flex items-center space-x-2">
+                  <AiOutlinePlus className="text-purple-400 text-xl" />
+                  <span className="font-medium">Assists:</span>
+                </span>
+                <span className="font-bold text-white">
+                  {showCareerStats
+                    ? careerStats.assists
+                    : player.seasonStats.assists}
+                </span>
+              </li>
+            </>
+          )}
         </ul>
       </div>
     </div>
@@ -146,25 +184,6 @@ function PlayerCard({ player }) {
 }
 
 // Prop validation for TeamSection
-TeamSection.propTypes = {
-  players: PropTypes.arrayOf(
-    PropTypes.shape({
-      image: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      position: PropTypes.string.isRequired,
-      careerStats: PropTypes.shape({
-        appearances: PropTypes.number.isRequired,
-        goals: PropTypes.number.isRequired,
-        assists: PropTypes.number.isRequired,
-      }).isRequired,
-      seasonStats: PropTypes.shape({
-        appearances: PropTypes.number.isRequired,
-        goals: PropTypes.number.isRequired,
-        assists: PropTypes.number.isRequired,
-      }).isRequired,
-    })
-  ).isRequired,
-};
 PlayerCard.propTypes = {
   player: PropTypes.shape({
     status: PropTypes.string.isRequired,
@@ -176,15 +195,48 @@ PlayerCard.propTypes = {
     position: PropTypes.string.isRequired,
     careerStats: PropTypes.shape({
       appearances: PropTypes.number.isRequired,
-      goals: PropTypes.number.isRequired,
-      assists: PropTypes.number.isRequired,
+      // Different validation depending on position (GK or outfield player)
+      goals: PropTypes.number, // Only for outfield players
+      assists: PropTypes.number, // Only for outfield players
+      goalsConceded: PropTypes.number, // Only for goalkeepers
+      cleanSheets: PropTypes.number, // Only for goalkeepers
     }).isRequired,
     seasonStats: PropTypes.shape({
       appearances: PropTypes.number.isRequired,
-      goals: PropTypes.number.isRequired,
-      assists: PropTypes.number.isRequired,
+      goals: PropTypes.number, // Only for outfield players
+      assists: PropTypes.number, // Only for outfield players
+      goalsConceded: PropTypes.number, // Only for goalkeepers
+      cleanSheets: PropTypes.number, // Only for goalkeepers
     }).isRequired,
   }).isRequired,
+};
+
+// Prop validation for TeamSection
+TeamSection.propTypes = {
+  players: PropTypes.arrayOf(
+    PropTypes.shape({
+      image: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      position: PropTypes.string.isRequired,
+      shirt: PropTypes.string.isRequired,
+      age: PropTypes.number.isRequired,
+      club: PropTypes.string.isRequired,
+      careerStats: PropTypes.shape({
+        appearances: PropTypes.number.isRequired,
+        goals: PropTypes.number, // Optional for goalkeepers
+        assists: PropTypes.number, // Optional for goalkeepers
+        goalsConceded: PropTypes.number, // Required for goalkeepers
+        cleanSheets: PropTypes.number, // Required for goalkeepers
+      }).isRequired,
+      seasonStats: PropTypes.shape({
+        appearances: PropTypes.number.isRequired,
+        goals: PropTypes.number, // Optional for goalkeepers
+        assists: PropTypes.number, // Optional for goalkeepers
+        goalsConceded: PropTypes.number, // Required for goalkeepers
+        cleanSheets: PropTypes.number, // Required for goalkeepers
+      }).isRequired,
+    })
+  ).isRequired,
 };
 
 export default TeamSection;

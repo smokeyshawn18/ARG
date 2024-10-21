@@ -68,9 +68,9 @@ const players = [
     image: Alvarez,
     leagues: {
       LaLiga: {
-        matches: 10,
+        matches: 11,
         goals: 3,
-        assists: 0,
+        assists: 1,
       },
       nationalStats: {
         matches: 4,
