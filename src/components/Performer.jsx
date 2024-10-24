@@ -39,6 +39,26 @@ const players = [
     },
   },
   {
+    name: "Julián Álvarez",
+    position: "Forward",
+    age: 24,
+    club: Laliga,
+    shirtNumber: 9,
+    image: Alvarez,
+    leagues: {
+      LaLiga: {
+        matches: 12,
+        goals: 4,
+        assists: 1,
+      },
+      nationalStats: {
+        matches: 4,
+        goals: 2,
+        assists: 1,
+      },
+    },
+  },
+  {
     name: "Alejandro Garnacho",
     position: "Forward",
     age: 20,
@@ -54,27 +74,6 @@ const players = [
       nationalStats: {
         matches: 1,
         goals: 0,
-        assists: 1,
-      },
-    },
-  },
-
-  {
-    name: "Julián Álvarez",
-    position: "Forward",
-    age: 24,
-    club: Laliga,
-    shirtNumber: 9,
-    image: Alvarez,
-    leagues: {
-      LaLiga: {
-        matches: 11,
-        goals: 3,
-        assists: 1,
-      },
-      nationalStats: {
-        matches: 4,
-        goals: 2,
         assists: 1,
       },
     },
