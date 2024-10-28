@@ -6,7 +6,7 @@ import {
 } from "react-icons/fa";
 import { GoGoal } from "react-icons/go";
 import Messi from "../assets/messi.jpg";
-// import Lautaro from "../assets/lautaro.avif";
+import Lautaro from "../assets/lautaro.avif";
 import Alvarez from "../assets/alvareez.jpg";
 import React from "react";
 import PropTypes from "prop-types";
@@ -14,8 +14,8 @@ import Laliga from "../assets/atletico.png";
 import Inter from "../assets/inter.webp";
 import Miami from "../assets/miami.png";
 import Argentina from "../assets/arg.png";
-import Garnacho from "../assets/garnacho.webp";
-import United from "../assets/united.svg";
+// import Garnacho from "../assets/garnacho.webp";
+// import United from "../assets/united.svg";
 
 const players = [
   {
@@ -47,7 +47,7 @@ const players = [
     image: Alvarez,
     leagues: {
       LaLiga: {
-        matches: 12,
+        matches: 13,
         goals: 4,
         assists: 1,
       },
@@ -59,21 +59,21 @@ const players = [
     },
   },
   {
-    name: "Alejandro Garnacho",
+    name: "Lautaro Martinez",
     position: "Forward",
-    age: 20,
-    club: United,
-    shirtNumber: 17,
-    image: Garnacho,
+    age: 27,
+    club: Inter,
+    shirtNumber: 22,
+    image: Lautaro,
     leagues: {
-      United: {
-        matches: 13,
-        goals: 5,
-        assists: 3,
+      SerieA: {
+        matches: 11,
+        goals: 4,
+        assists: 1,
       },
       nationalStats: {
-        matches: 1,
-        goals: 0,
+        matches: 4,
+        goals: 1,
         assists: 1,
       },
     },
@@ -199,15 +199,7 @@ function KeyPerformers() {
                         assists={player.leagues.SerieA.assists}
                       />
                     )}
-                    {player.leagues.United && (
-                      <LeagueStats
-                        leagueName="Manchester United "
-                        leagueLogo={United}
-                        matches={player.leagues.United.matches}
-                        goals={player.leagues.United.goals}
-                        assists={player.leagues.United.assists}
-                      />
-                    )}
+
                     <LeagueStats
                       leagueName="National - 24/25 Season"
                       leagueLogo={Argentina}
@@ -228,21 +220,33 @@ function KeyPerformers() {
 
 function LeagueStats({ leagueName, leagueLogo, matches, goals, assists }) {
   return (
-    <div className="bg-white p-4 rounded-lg shadow-xl flex items-center border-t-4 border-sky-200">
-      <img src={leagueLogo} alt={leagueName} className="w-12 h-12 mr-4" />
-      <div className="flex-1">
-        <div className="text-xl font-semibold text-sky-700">{leagueName}</div>
-        <div className="flex justify-between mt-2">
-          <span className="text-gray-600">Matches:</span>
-          <span className="font-semibold text-gray-800">{matches}</span>
+    <div className="bg-white p-4 sm:p-6 rounded-lg shadow-xl flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
+      <img
+        src={leagueLogo}
+        alt={leagueName}
+        className="w-12 h-12 sm:w-16 sm:h-16 mr-4"
+      />
+      <div className="flex-1 text-center sm:text-left">
+        <div className="text-lg sm:text-xl font-semibold text-sky-700">
+          {leagueName}
+        </div>
+        <div className="flex justify-between mt-3 sm:mt-2">
+          <span className="text-sm sm:text-base text-gray-600">Matches:</span>
+          <span className="font-semibold text-gray-800 text-sm sm:text-base">
+            {matches}
+          </span>
         </div>
         <div className="flex justify-between mt-2">
-          <span className="text-gray-600">Goals:</span>
-          <span className="font-semibold text-gray-800">{goals}</span>
+          <span className="text-sm sm:text-base text-gray-600">Goals:</span>
+          <span className="font-semibold text-gray-800 text-sm sm:text-base">
+            {goals}
+          </span>
         </div>
         <div className="flex justify-between mt-2">
-          <span className="text-gray-600">Assists:</span>
-          <span className="font-semibold text-gray-800">{assists}</span>
+          <span className="text-sm sm:text-base text-gray-600">Assists:</span>
+          <span className="font-semibold text-gray-800 text-sm sm:text-base">
+            {assists}
+          </span>
         </div>
       </div>
     </div>
