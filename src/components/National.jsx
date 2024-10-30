@@ -9,7 +9,8 @@ import Garnacho from "../assets/garnacho.webp";
 import Dybala from "../assets/dybala.png";
 import Nicolas from "../assets/nic.jpg";
 import Lisandro from "../assets/lisandro.jpg";
-
+import Pala from "../assets/pal.jpg";
+import Molina from "../assets/molina.webp";
 import Mac from "../assets/mac.webp";
 
 import De from "../assets/de.jpg";
@@ -35,15 +36,7 @@ const National = () => {
       nationalGoals: 31,
       nationalAssists: 32,
     },
-    {
-      image: Dybala,
-      name: "Paulo Dybala",
-      position: "AM",
-      shirt: 21,
-      nationalAppearances: 40,
-      nationalGoals: 4,
-      nationalAssists: 7,
-    },
+
     {
       image: Lautaro,
       name: "Lautaro Martinez",
@@ -71,6 +64,16 @@ const National = () => {
       nationalGoals: 6,
       nationalAssists: 3,
     },
+    {
+      image: Dybala,
+      name: "Paulo Dybala",
+      position: "AM",
+      shirt: 21,
+      nationalAppearances: 40,
+      nationalGoals: 4,
+      nationalAssists: 7,
+    },
+
     {
       image: De,
       name: "Rodrigo De Paul",
@@ -105,6 +108,24 @@ const National = () => {
       shirt: 24,
       nationalAppearances: 32,
       nationalGoals: 4,
+      nationalAssists: 4,
+    },
+    {
+      image: Pala,
+      name: "Exequiel Palacios",
+      position: "CM",
+      shirt: 14,
+      nationalAppearances: 32,
+      nationalGoals: 0,
+      nationalAssists: 5,
+    },
+    {
+      image: Molina,
+      name: "Nahuel Molina",
+      position: "RB",
+      shirt: 26,
+      nationalAppearances: 47,
+      nationalGoals: 1,
       nationalAssists: 4,
     },
     {

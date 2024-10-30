@@ -27,6 +27,7 @@ import Romero from "../assets/romero.webp";
 import Tottenham from "../assets/tot.jpg";
 import Emi from "../assets/emi.jpg";
 import Villa from "../assets/villa.png";
+import Molina from "../assets/molina.jpg";
 
 const players = [
   {
@@ -194,6 +195,7 @@ const players = [
       assists: 1,
     },
   },
+
   {
     name: "Enzo Fernandez",
     position: "CM",
@@ -212,6 +214,7 @@ const players = [
       assists: 1,
     },
   },
+
   {
     name: "Exequiel Palacios",
     position: "CM",
@@ -225,9 +228,27 @@ const players = [
       assists: 25,
     },
     seasonStats: {
-      appearances: 7,
+      appearances: 8,
       goals: 0,
       assists: 3,
+    },
+  },
+  {
+    name: "Nahuel Molina",
+    position: "RB",
+    shirt: 26,
+    age: 26,
+    image: Molina,
+    club: Atletico,
+    careerStats: {
+      appearances: 266,
+      goals: 19,
+      assists: 26,
+    },
+    seasonStats: {
+      appearances: 15,
+      goals: 0,
+      assists: 1,
     },
   },
   {
