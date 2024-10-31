@@ -67,9 +67,9 @@ const players = [
     image: Lautaro,
     leagues: {
       SerieA: {
-        matches: 11,
-        goals: 4,
-        assists: 1,
+        matches: 12,
+        goals: 5,
+        assists: 2,
       },
       nationalStats: {
         matches: 4,
