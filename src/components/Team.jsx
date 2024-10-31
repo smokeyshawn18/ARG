@@ -234,24 +234,6 @@ const players = [
     },
   },
   {
-    name: "Nahuel Molina",
-    position: "RB",
-    shirt: 26,
-    age: 26,
-    image: Molina,
-    club: Atletico,
-    careerStats: {
-      appearances: 266,
-      goals: 19,
-      assists: 26,
-    },
-    seasonStats: {
-      appearances: 15,
-      goals: 0,
-      assists: 1,
-    },
-  },
-  {
     name: "Alejandro Garnacho",
     position: "LW",
     shirt: 17,
@@ -269,6 +251,25 @@ const players = [
       assists: 5,
     },
   },
+  {
+    name: "Nahuel Molina",
+    position: "RB",
+    shirt: 26,
+    age: 26,
+    image: Molina,
+    club: Atletico,
+    careerStats: {
+      appearances: 266,
+      goals: 19,
+      assists: 26,
+    },
+    seasonStats: {
+      appearances: 15,
+      goals: 0,
+      assists: 1,
+    },
+  },
+
   {
     name: "Cristian Romero",
     position: "CB",

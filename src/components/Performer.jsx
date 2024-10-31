@@ -7,15 +7,15 @@ import {
 import { GoGoal } from "react-icons/go";
 import Messi from "../assets/messi.jpg";
 import Lautaro from "../assets/lautaro.avif";
-import Alvarez from "../assets/alvareez.jpg";
+// import Alvarez from "../assets/alvareez.jpg";
 import React from "react";
 import PropTypes from "prop-types";
 import Laliga from "../assets/atletico.png";
 import Inter from "../assets/inter.webp";
 import Miami from "../assets/miami.png";
 import Argentina from "../assets/arg.png";
-// import Garnacho from "../assets/garnacho.webp";
-// import United from "../assets/united.svg";
+import Garnacho from "../assets/garnacho.webp";
+import United from "../assets/united.svg";
 
 const players = [
   {
@@ -39,25 +39,45 @@ const players = [
     },
   },
   {
-    name: "Julián Álvarez",
+    name: "Alejandro Garnacho",
     position: "Forward",
-    age: 24,
-    club: Laliga,
-    shirtNumber: 9,
-    image: Alvarez,
+    age: 20,
+    club: United,
+    shirtNumber: 17,
+    image: Garnacho,
     leagues: {
-      LaLiga: {
-        matches: 13,
-        goals: 4,
-        assists: 1,
+      United: {
+        matches: 15,
+        goals: 6,
+        assists: 4,
       },
       nationalStats: {
-        matches: 4,
-        goals: 2,
+        matches: 1,
+        goals: 0,
         assists: 1,
       },
     },
   },
+  // {
+  //   name: "Julián Álvarez",
+  //   position: "Forward",
+  //   age: 24,
+  //   club: Laliga,
+  //   shirtNumber: 9,
+  //   image: Alvarez,
+  //   leagues: {
+  //     LaLiga: {
+  //       matches: 13,
+  //       goals: 4,
+  //       assists: 1,
+  //     },
+  //     nationalStats: {
+  //       matches: 4,
+  //       goals: 2,
+  //       assists: 1,
+  //     },
+  //   },
+  // },
   {
     name: "Lautaro Martinez",
     position: "Forward",
@@ -199,7 +219,15 @@ function KeyPerformers() {
                         assists={player.leagues.SerieA.assists}
                       />
                     )}
-
+                    {player.leagues.United && (
+                      <LeagueStats
+                        leagueName="Man United"
+                        leagueLogo={United}
+                        matches={player.leagues.United.matches}
+                        goals={player.leagues.United.goals}
+                        assists={player.leagues.United.assists}
+                      />
+                    )}
                     <LeagueStats
                       leagueName="National - 24/25 Season"
                       leagueLogo={Argentina}
