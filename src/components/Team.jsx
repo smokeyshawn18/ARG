@@ -80,8 +80,8 @@ const players = [
       assists: 89,
     },
     seasonStats: {
-      appearances: 12,
-      goals: 2,
+      appearances: 13,
+      goals: 3,
       assists: 0,
     },
   },
@@ -116,8 +116,8 @@ const players = [
       assists: 50,
     },
     seasonStats: {
-      appearances: 17,
-      goals: 6,
+      appearances: 18,
+      goals: 8,
       assists: 2,
     },
   },

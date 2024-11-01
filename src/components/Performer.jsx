@@ -6,8 +6,8 @@ import {
 } from "react-icons/fa";
 import { GoGoal } from "react-icons/go";
 import Messi from "../assets/messi.jpg";
-import Lautaro from "../assets/lautaro.avif";
-// import Alvarez from "../assets/alvareez.jpg";
+// import Lautaro from "../assets/lautaro.avif";
+import Alvarez from "../assets/alvareez.jpg";
 import React from "react";
 import PropTypes from "prop-types";
 import Laliga from "../assets/atletico.png";
@@ -38,6 +38,27 @@ const players = [
       },
     },
   },
+
+  {
+    name: "Julián Álvarez",
+    position: "Forward",
+    age: 24,
+    club: Laliga,
+    shirtNumber: 9,
+    image: Alvarez,
+    leagues: {
+      LaLiga: {
+        matches: 14,
+        goals: 6,
+        assists: 1,
+      },
+      nationalStats: {
+        matches: 4,
+        goals: 2,
+        assists: 1,
+      },
+    },
+  },
   {
     name: "Alejandro Garnacho",
     position: "Forward",
@@ -59,45 +80,25 @@ const players = [
     },
   },
   // {
-  //   name: "Julián Álvarez",
+  //   name: "Lautaro Martinez",
   //   position: "Forward",
-  //   age: 24,
-  //   club: Laliga,
-  //   shirtNumber: 9,
-  //   image: Alvarez,
+  //   age: 27,
+  //   club: Inter,
+  //   shirtNumber: 22,
+  //   image: Lautaro,
   //   leagues: {
-  //     LaLiga: {
-  //       matches: 13,
-  //       goals: 4,
-  //       assists: 1,
+  //     SerieA: {
+  //       matches: 12,
+  //       goals: 5,
+  //       assists: 2,
   //     },
   //     nationalStats: {
   //       matches: 4,
-  //       goals: 2,
+  //       goals: 1,
   //       assists: 1,
   //     },
   //   },
   // },
-  {
-    name: "Lautaro Martinez",
-    position: "Forward",
-    age: 27,
-    club: Inter,
-    shirtNumber: 22,
-    image: Lautaro,
-    leagues: {
-      SerieA: {
-        matches: 12,
-        goals: 5,
-        assists: 2,
-      },
-      nationalStats: {
-        matches: 4,
-        goals: 1,
-        assists: 1,
-      },
-    },
-  },
 ];
 
 function KeyPerformers() {
