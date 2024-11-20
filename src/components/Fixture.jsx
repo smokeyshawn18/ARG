@@ -4,29 +4,8 @@ import Conmebol from "../assets/conmebol.png";
 import Uru from "../assets/uru.png";
 import Brazil from "../assets/brazil.png";
 import Chile from "../assets/chile.png";
-import Peru from "../assets/peru.png";
 
 const fixtures = [
-  {
-    homeTeam: {
-      name: "Argentina",
-      logo: Argentina,
-      country: "Argentina",
-    },
-    
-    awayTeam: {
-      name: "Peru",
-      logo: Peru,
-      country: "Peru",
-    },
-    date: "2024-11-20",
-    time: "05:45",
-    format: "AM",
-    comp: "WC - Qualifiers Conmebol",
-    venue: "Estadio Mas Monumental",
-    stadium: "Buenos Aires, Argentina",
-    competetion: Conmebol,
-  },
   {
     homeTeam: {
       name: "Uruguay",

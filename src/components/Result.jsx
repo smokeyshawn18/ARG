@@ -4,31 +4,31 @@ import Conmebol from "../assets/conmebol.png";
 import Venezuela from "../assets/vene.png";
 import Bolivia from "../assets/bolivia.png";
 import Para from "../assets/para.png";
-// import Peru from "../assets/peru.png";
+import Peru from "../assets/peru.png";
 
 const Results = () => {
   const results = [
-    // {
-    //   homeTeam: {
-    //     name: "Argentina",
-    //     logo: Argentina,
-    //   },
-    //   awayTeam: {
-    //     name: "Peru",
-    //     logo: Peru,
-    //   },
-    //   date: "November 20, 2024",
-    //   time: "5:45",
-    //   format: "AM",
-    //   competitionLogo: Conmebol,
-    //   competition: "WC - Qualifiers Conmebol",
-    //   venue: "Estadio Monumental de Maturin, Venezuela",
-    //   stadium: "Venezuela",
-    //   scorers: {
-    //     homeTeam: [{ player: "Otamendi", minute: "13'" }],
-    //     awayTeam: [{ player: "Rondon", minute: "65'" }],
-    //   },
-    // },
+    {
+      homeTeam: {
+        name: "Argentina",
+        logo: Argentina,
+      },
+      awayTeam: {
+        name: "Peru",
+        logo: Peru,
+      },
+      date: "November 20, 2024",
+      time: "5:45",
+      format: "AM",
+      competitionLogo: Conmebol,
+      competition: "WC - Qualifiers Conmebol",
+      venue: "Estadio Monumental de Maturin, Venezuela",
+      stadium: "Venezuela",
+      scorers: {
+        homeTeam: [{ player: "Lautaro", minute: "55'" }],
+        awayTeam: [{ player: "" }],
+      },
+    },
     {
       awayTeam: {
         name: "Paraguay",
@@ -130,10 +130,12 @@ const Results = () => {
   // Function to calculate score based on the number of goal minutes
   const calculateScore = (teamScorers) => {
     return teamScorers.length > 0
-      ? teamScorers.reduce(
-          (total, scorer) => total + scorer.minute.split(", ").length,
-          0
-        )
+      ? teamScorers.reduce((total, scorer) => {
+          if (scorer.minute && typeof scorer.minute === "string") {
+            return total + scorer.minute.split(",").length;
+          }
+          return total;
+        }, 0)
       : 0;
   };
 

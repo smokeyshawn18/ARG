@@ -38,14 +38,14 @@ const players = [
     image: Messi,
     club: Miami,
     careerStats: {
-      appearances: 1054,
-      goals: 824,
-      assists: 363,
+      appearances: 1047,
+      goals: 821,
+      assists: 361,
     },
     seasonStats: {
-      appearances: 28,
-      goals: 26,
-      assists: 15,
+      appearances: 36,
+      goals: 29,
+      assists: 18,
     },
   },
   {
@@ -67,6 +67,25 @@ const players = [
       assists: 2,
     },
   },
+
+  {
+    name: "Lautaro Martinez",
+    position: "ST",
+    shirt: 22,
+    club: Inter,
+    age: 27,
+    image: Lautaro,
+    careerStats: {
+      appearances: 408,
+      goals: 185,
+      assists: 57,
+    },
+    seasonStats: {
+      appearances: 21,
+      goals: 9,
+      assists: 3,
+    },
+  },
   {
     name: "Paulo Dybala",
     position: "RW",
@@ -86,24 +105,6 @@ const players = [
     },
   },
   {
-    name: "Lautaro Martinez",
-    position: "ST",
-    shirt: 22,
-    club: Inter,
-    age: 27,
-    image: Lautaro,
-    careerStats: {
-      appearances: 408,
-      goals: 185,
-      assists: 57,
-    },
-    seasonStats: {
-      appearances: 20,
-      goals: 8,
-      assists: 3,
-    },
-  },
-  {
     name: "Julián Álvarez",
     position: "ST",
     shirt: 9,
@@ -116,7 +117,7 @@ const players = [
       assists: 50,
     },
     seasonStats: {
-      appearances: 22,
+      appearances: 23,
       goals: 9,
       assists: 2,
     },
@@ -152,7 +153,7 @@ const players = [
       assists: 75,
     },
     seasonStats: {
-      appearances: 21,
+      appearances: 22,
       goals: 0,
       assists: 2,
     },
@@ -171,7 +172,7 @@ const players = [
       assists: 32,
     },
     seasonStats: {
-      appearances: 21,
+      appearances: 22,
       goals: 2,
       assists: 0,
     },
@@ -190,7 +191,7 @@ const players = [
       assists: 44,
     },
     seasonStats: {
-      appearances: 11,
+      appearances: 12,
       goals: 0,
       assists: 1,
     },
@@ -209,7 +210,7 @@ const players = [
       assists: 28,
     },
     seasonStats: {
-      appearances: 18,
+      appearances: 19,
       goals: 0,
       assists: 6,
     },
@@ -319,9 +320,9 @@ const players = [
       cleanSheets: 119,
     },
     seasonStats: {
-      appearances: 17,
+      appearances: 18,
       goalsConceded: 21,
-      cleanSheets: 5,
+      cleanSheets: 6,
     },
   },
 

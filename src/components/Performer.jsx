@@ -32,13 +32,32 @@ const players = [
         assists: 13,
       },
       nationalStats: {
-        matches: 3,
-        goals: 3,
-        assists: 2,
+        matches: 11,
+        goals: 6,
+        assists: 5,
       },
     },
   },
-
+  {
+    name: "Lautaro Martinez",
+    position: "Forward",
+    age: 27,
+    club: Inter,
+    shirtNumber: 22,
+    image: Lautaro,
+    leagues: {
+      SerieA: {
+        matches: 15,
+        goals: 6,
+        assists: 2,
+      },
+      nationalStats: {
+        matches: 6,
+        goals: 3,
+        assists: 1,
+      },
+    },
+  },
   {
     name: "Julián Álvarez",
     position: "Forward",
@@ -53,7 +72,7 @@ const players = [
         assists: 1,
       },
       nationalStats: {
-        matches: 5,
+        matches: 6,
         goals: 2,
         assists: 1,
       },
@@ -79,26 +98,6 @@ const players = [
   //     },
   //   },
   // },
-  {
-    name: "Lautaro Martinez",
-    position: "Forward",
-    age: 27,
-    club: Inter,
-    shirtNumber: 22,
-    image: Lautaro,
-    leagues: {
-      SerieA: {
-        matches: 15,
-        goals: 6,
-        assists: 2,
-      },
-      nationalStats: {
-        matches: 5,
-        goals: 2,
-        assists: 1,
-      },
-    },
-  },
 ];
 
 function KeyPerformers() {

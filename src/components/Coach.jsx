@@ -8,7 +8,7 @@ import Scaloni from "../assets/scaloni.webp"; // Update with correct path
 
 export default function CoachProfile() {
   // Define individual stats
-  const wins = 61;
+  const wins = 62;
   const draws = 13;
   const losses = 8;
   const totalTrophies = 4; // Example value
