@@ -23,7 +23,7 @@ const Results = () => {
       competitionLogo: Conmebol,
       competition: "WC - Qualifiers Conmebol",
       venue: "Estadio Monumental de Maturin, Venezuela",
-      stadium: "Venezuela",
+      stadium: "Argentina",
       scorers: {
         homeTeam: [{ player: "Lautaro", minute: "55'" }],
         awayTeam: [{ player: "" }],
@@ -68,7 +68,7 @@ const Results = () => {
       competitionLogo: Conmebol,
       competition: "WC - Qualifiers Conmebol",
       venue: "Estadio Mas Monumental, Argentina",
-      stadium: "Columbia",
+      stadium: "Argentina",
       scorers: {
         homeTeam: [
           { player: "Messi", minute: "19', 84', 86'" },
