@@ -38,26 +38,7 @@ const players = [
       },
     },
   },
-  {
-    name: "Lautaro Martinez",
-    position: "Forward",
-    age: 27,
-    club: Inter,
-    shirtNumber: 22,
-    image: Lautaro,
-    leagues: {
-      SerieA: {
-        matches: 15,
-        goals: 6,
-        assists: 2,
-      },
-      nationalStats: {
-        matches: 6,
-        goals: 3,
-        assists: 1,
-      },
-    },
-  },
+
   {
     name: "Julián Álvarez",
     position: "Forward",
@@ -67,13 +48,33 @@ const players = [
     image: Alvarez,
     leagues: {
       LaLiga: {
-        matches: 17,
-        goals: 7,
+        matches: 20,
+        goals: 9,
         assists: 1,
       },
       nationalStats: {
         matches: 6,
         goals: 2,
+        assists: 1,
+      },
+    },
+  },
+  {
+    name: "Lautaro Martinez",
+    position: "Forward",
+    age: 27,
+    club: Inter,
+    shirtNumber: 22,
+    image: Lautaro,
+    leagues: {
+      SerieA: {
+        matches: 16,
+        goals: 6,
+        assists: 2,
+      },
+      nationalStats: {
+        matches: 6,
+        goals: 3,
         assists: 1,
       },
     },
@@ -87,7 +88,7 @@ const players = [
   //   image: Garnacho,
   //   leagues: {
   //     United: {
-  //       matches: 18,
+  //       matches: 19,
   //       goals: 7,
   //       assists: 4,
   //     },
