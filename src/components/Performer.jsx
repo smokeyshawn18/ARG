@@ -88,8 +88,8 @@ const players = [
   //   image: Garnacho,
   //   leagues: {
   //     United: {
-  //       matches: 19,
-  //       goals: 7,
+  //       matches: 20,
+  //       goals: 8,
   //       assists: 4,
   //     },
   //     nationalStats: {
