@@ -48,9 +48,9 @@ const players = [
     image: Alvarez,
     leagues: {
       LaLiga: {
-        matches: 20,
-        goals: 9,
-        assists: 1,
+        matches: 21,
+        goals: 10,
+        assists: 2,
       },
       nationalStats: {
         matches: 6,
@@ -88,7 +88,7 @@ const players = [
   //   image: Garnacho,
   //   leagues: {
   //     United: {
-  //       matches: 20,
+  //       matches: 21,
   //       goals: 8,
   //       assists: 4,
   //     },
