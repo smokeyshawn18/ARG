@@ -48,7 +48,7 @@ const players = [
     image: Alvarez,
     leagues: {
       LaLiga: {
-        matches: 23,
+        matches: 25,
         goals: 12,
         assists: 2,
       },
@@ -68,7 +68,7 @@ const players = [
     image: Lautaro,
     leagues: {
       SerieA: {
-        matches: 19,
+        matches: 20,
         goals: 6,
         assists: 2,
       },

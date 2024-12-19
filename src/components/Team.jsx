@@ -62,7 +62,7 @@ const players = [
       assists: 299,
     },
     seasonStats: {
-      appearances: 20,
+      appearances: 21,
       goals: 9,
       assists: 5,
     },
@@ -81,7 +81,7 @@ const players = [
       assists: 57,
     },
     seasonStats: {
-      appearances: 25,
+      appearances: 26,
       goals: 9,
       assists: 3,
     },
@@ -99,7 +99,7 @@ const players = [
       assists: 89,
     },
     seasonStats: {
-      appearances: 19,
+      appearances: 20,
       goals: 3,
       assists: 1,
     },
@@ -117,7 +117,7 @@ const players = [
       assists: 50,
     },
     seasonStats: {
-      appearances: 30,
+      appearances: 31,
       goals: 14,
       assists: 3,
     },
@@ -135,9 +135,9 @@ const players = [
       assists: 34,
     },
     seasonStats: {
-      appearances: 9,
-      goals: 2,
-      assists: 1,
+      appearances: 10,
+      goals: 3,
+      assists: 2,
     },
   },
   {
@@ -153,7 +153,7 @@ const players = [
       assists: 75,
     },
     seasonStats: {
-      appearances: 28,
+      appearances: 29,
       goals: 2,
       assists: 5,
     },
@@ -172,7 +172,7 @@ const players = [
       assists: 32,
     },
     seasonStats: {
-      appearances: 26,
+      appearances: 27,
       goals: 3,
       assists: 0,
     },
@@ -191,9 +191,9 @@ const players = [
       assists: 44,
     },
     seasonStats: {
-      appearances: 15,
+      appearances: 16,
       goals: 0,
-      assists: 1,
+      assists: 2,
     },
   },
 
@@ -210,9 +210,9 @@ const players = [
       assists: 28,
     },
     seasonStats: {
-      appearances: 25,
+      appearances: 26,
       goals: 3,
-      assists: 8,
+      assists: 9,
     },
   },
 
@@ -265,9 +265,9 @@ const players = [
       assists: 26,
     },
     seasonStats: {
-      appearances: 20,
+      appearances: 21,
       goals: 1,
-      assists: 2,
+      assists: 3,
     },
   },
 
@@ -302,9 +302,9 @@ const players = [
       assists: 13,
     },
     seasonStats: {
-      appearances: 23,
+      appearances: 24,
       goals: 0,
-      assists: 0,
+      assists: 1,
     },
   },
   {
