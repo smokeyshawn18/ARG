@@ -16,6 +16,8 @@ import Miami from "../assets/miami.png";
 import Argentina from "../assets/arg.png";
 // import Garnacho from "../assets/garnacho.webp";
 import United from "../assets/united.svg";
+import Benfica from "../assets/benfica.png";
+import ADM from "../assets/adm.webp";
 
 const players = [
   {
@@ -60,6 +62,26 @@ const players = [
     },
   },
   {
+    name: "Angel Di Maria",
+    position: "Forward",
+    age: 36,
+    club: Benfica,
+    shirtNumber: 11,
+    image: ADM,
+    leagues: {
+      Benfica: {
+        matches: 22,
+        goals: 11,
+        assists: 5,
+      },
+      nationalStats: {
+        matches: 0,
+        goals: 0,
+        assists: 0,
+      },
+    },
+  },
+  {
     name: "Lautaro Martinez",
     position: "Forward",
     age: 27,
@@ -68,7 +90,7 @@ const players = [
     image: Lautaro,
     leagues: {
       SerieA: {
-        matches: 20,
+        matches: 21,
         goals: 6,
         assists: 2,
       },
@@ -209,6 +231,15 @@ function KeyPerformers() {
                         matches={player.leagues.LaLiga.matches}
                         goals={player.leagues.LaLiga.goals}
                         assists={player.leagues.LaLiga.assists}
+                      />
+                    )}
+                    {player.leagues.Benfica && (
+                      <LeagueStats
+                        leagueName="Benfica"
+                        leagueLogo={Benfica}
+                        matches={player.leagues.Benfica.matches}
+                        goals={player.leagues.Benfica.goals}
+                        assists={player.leagues.Benfica.assists}
                       />
                     )}
                     {player.leagues.SerieA && (

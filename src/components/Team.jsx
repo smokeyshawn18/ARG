@@ -62,8 +62,8 @@ const players = [
       assists: 299,
     },
     seasonStats: {
-      appearances: 21,
-      goals: 9,
+      appearances: 22,
+      goals: 11,
       assists: 5,
     },
   },
@@ -81,7 +81,7 @@ const players = [
       assists: 57,
     },
     seasonStats: {
-      appearances: 26,
+      appearances: 27,
       goals: 9,
       assists: 3,
     },
@@ -247,7 +247,7 @@ const players = [
       assists: 10,
     },
     seasonStats: {
-      appearances: 26,
+      appearances: 27,
       goals: 8,
       assists: 5,
     },
@@ -302,7 +302,7 @@ const players = [
       assists: 13,
     },
     seasonStats: {
-      appearances: 24,
+      appearances: 25,
       goals: 0,
       assists: 1,
     },
