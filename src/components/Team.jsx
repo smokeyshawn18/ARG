@@ -67,7 +67,24 @@ const players = [
       assists: 5,
     },
   },
-
+  {
+    name: "Paulo Dybala",
+    position: "RW",
+    shirt: 21,
+    club: Roma,
+    age: 30,
+    image: Dybala,
+    careerStats: {
+      appearances: 541,
+      goals: 190,
+      assists: 89,
+    },
+    seasonStats: {
+      appearances: 21,
+      goals: 5,
+      assists: 2,
+    },
+  },
   {
     name: "Lautaro Martinez",
     position: "ST",
@@ -86,24 +103,7 @@ const players = [
       assists: 3,
     },
   },
-  {
-    name: "Paulo Dybala",
-    position: "RW",
-    shirt: 21,
-    club: Roma,
-    age: 30,
-    image: Dybala,
-    careerStats: {
-      appearances: 541,
-      goals: 190,
-      assists: 89,
-    },
-    seasonStats: {
-      appearances: 20,
-      goals: 3,
-      assists: 1,
-    },
-  },
+
   {
     name: "Julián Álvarez",
     position: "ST",
@@ -117,7 +117,7 @@ const players = [
       assists: 50,
     },
     seasonStats: {
-      appearances: 31,
+      appearances: 32,
       goals: 14,
       assists: 3,
     },
@@ -153,8 +153,8 @@ const players = [
       assists: 75,
     },
     seasonStats: {
-      appearances: 29,
-      goals: 2,
+      appearances: 30,
+      goals: 3,
       assists: 5,
     },
   },
@@ -191,8 +191,8 @@ const players = [
       assists: 44,
     },
     seasonStats: {
-      appearances: 16,
-      goals: 0,
+      appearances: 17,
+      goals: 1,
       assists: 2,
     },
   },
@@ -210,7 +210,7 @@ const players = [
       assists: 28,
     },
     seasonStats: {
-      appearances: 26,
+      appearances: 27,
       goals: 3,
       assists: 9,
     },
@@ -229,9 +229,9 @@ const players = [
       assists: 25,
     },
     seasonStats: {
-      appearances: 17,
+      appearances: 18,
       goals: 1,
-      assists: 4,
+      assists: 5,
     },
   },
   {
@@ -247,7 +247,7 @@ const players = [
       assists: 10,
     },
     seasonStats: {
-      appearances: 27,
+      appearances: 28,
       goals: 8,
       assists: 5,
     },
@@ -265,9 +265,9 @@ const players = [
       assists: 26,
     },
     seasonStats: {
-      appearances: 21,
+      appearances: 22,
       goals: 1,
-      assists: 3,
+      assists: 4,
     },
   },
 
@@ -302,7 +302,7 @@ const players = [
       assists: 13,
     },
     seasonStats: {
-      appearances: 25,
+      appearances: 26,
       goals: 0,
       assists: 1,
     },
@@ -320,8 +320,8 @@ const players = [
       cleanSheets: 119,
     },
     seasonStats: {
-      appearances: 26,
-      goalsConceded: 32,
+      appearances: 27,
+      goalsConceded: 33,
       cleanSheets: 7,
     },
   },

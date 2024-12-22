@@ -6,7 +6,7 @@ import {
 } from "react-icons/fa";
 import { GoGoal } from "react-icons/go";
 import Messi from "../assets/messi.jpg";
-import Lautaro from "../assets/lautaro.avif";
+// import Lautaro from "../assets/lautaro.avif";
 import Alvarez from "../assets/alvareez.jpg";
 import React from "react";
 import PropTypes from "prop-types";
@@ -50,7 +50,7 @@ const players = [
     image: Alvarez,
     leagues: {
       LaLiga: {
-        matches: 25,
+        matches: 26,
         goals: 12,
         assists: 2,
       },
@@ -81,26 +81,26 @@ const players = [
       },
     },
   },
-  {
-    name: "Lautaro Martinez",
-    position: "Forward",
-    age: 27,
-    club: Inter,
-    shirtNumber: 22,
-    image: Lautaro,
-    leagues: {
-      SerieA: {
-        matches: 21,
-        goals: 6,
-        assists: 2,
-      },
-      nationalStats: {
-        matches: 6,
-        goals: 3,
-        assists: 1,
-      },
-    },
-  },
+  // {
+  //   name: "Lautaro Martinez",
+  //   position: "Forward",
+  //   age: 27,
+  //   club: Inter,
+  //   shirtNumber: 22,
+  //   image: Lautaro,
+  //   leagues: {
+  //     SerieA: {
+  //       matches: 21,
+  //       goals: 6,
+  //       assists: 2,
+  //     },
+  //     nationalStats: {
+  //       matches: 6,
+  //       goals: 3,
+  //       assists: 1,
+  //     },
+  //   },
+  // },
   // {
   //   name: "Alejandro Garnacho",
   //   position: "Forward",
