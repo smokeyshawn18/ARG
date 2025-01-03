@@ -90,7 +90,7 @@ const players = [
   //   image: Lautaro,
   //   leagues: {
   //     SerieA: {
-  //       matches: 23,
+  //       matches: 24,
   //       goals: 7,
   //       assists: 2,
   //     },
